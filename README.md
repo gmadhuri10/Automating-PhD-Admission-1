@@ -11,3 +11,8 @@
 - Bi-weekly report - Progress in the last two weeks 
 - Testing report - Testing modules and debugging 
 - User feedback report - users experience, likes and dislikes
+
+
+##  Softwares:
+- Frontend - Bootstrap
+- Backend - Firebase
