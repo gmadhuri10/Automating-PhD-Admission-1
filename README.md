@@ -14,5 +14,5 @@
 
 
 ##  Softwares:
-- Frontend - Bootstrap
-- Backend - Firebase
+- React
+- MongoDB
