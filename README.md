@@ -14,5 +14,5 @@
 
 
 ##  Softwares:
-- React
-- MongoDB
+- Android studio
+- firebase
