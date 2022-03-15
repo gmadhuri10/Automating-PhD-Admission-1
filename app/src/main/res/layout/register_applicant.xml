@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1177A5">
+    android:background="#1177A5"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/RegisterHeader"
@@ -56,6 +57,7 @@
             app:endIconTint="@color/black"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
+            android:layout_marginTop="20dp"
             app:hintTextColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -275,18 +277,20 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/LoginBtn"
+            android:id="@+id/RegisterBtn"
             android:layout_width="130dp"
             android:layout_height="63dp"
             android:backgroundTint="#17639F"
             android:text="Register"
             android:layout_marginLeft="125dp"
             android:textColor="@color/white"
+            android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
-            app:layout_constraintVertical_bias="0.153" />
+            app:layout_constraintVertical_bias="0.153"
+            android:onClick="check"/>
 
         <ProgressBar
             android:id="@+id/progressBarReg"
@@ -295,12 +299,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="165dp"
             android:visibility="invisible"
+            android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/LoginBtn"
-            app:layout_constraintVertical_bias="0.433" />
+            app:layout_constraintVertical_bias="0.433"
+            android:layout_marginBottom="30dp"/>
     </LinearLayout>
     </ScrollView>
 
