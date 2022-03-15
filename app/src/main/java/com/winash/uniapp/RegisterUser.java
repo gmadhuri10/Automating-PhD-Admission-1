@@ -47,6 +47,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         progress=(ProgressBar) findViewById(R.id.progressBarReg);
         login=(TextView) findViewById(R.id.Logintext);
         RefApplicant= FirebaseDatabase.getInstance().getReference("Applicant");
+        login.setOnClickListener(this);
+        RegisterUser.setOnClickListener(this);
     }
 
     @Override
@@ -73,19 +75,19 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             uname.requestFocus();
             return;
         }
-        if(fn.isEmpty()||noNumber(fn))
+        if(fn.isEmpty()||!noNumber(fn))
         {
             fname.setError("First Name Not Valid!!!");
             fname.requestFocus();
             return;
         }
-        if(ln.isEmpty()||noNumber(ln))
+        if(ln.isEmpty()||!noNumber(ln))
         {
             lname.setError("Last Name Not Valid!!!");
             lname.requestFocus();
             return;
         }
-        if(num.isEmpty()||!isInteger(num))
+        if(num.isEmpty()||!isInteger(num)||num.length()!=10)
         {
             number.setError("Number Not Valid!!!");
             number.requestFocus();
@@ -134,7 +136,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     }
     public boolean noNumber(String s){
         char[] chars = s.toCharArray();
-        StringBuilder sb = new StringBuilder();
         for(char c : chars){
             if(Character.isDigit(c)){
                 return false;

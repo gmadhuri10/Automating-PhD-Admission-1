@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Register=(TextView) findViewById(R.id.RegisterMain);
         Login=(TextView) findViewById(R.id.LoginMain);
         Register.setOnClickListener(this);
+        Login.setOnClickListener(this);
 
     }
         public void onClick(View v){
