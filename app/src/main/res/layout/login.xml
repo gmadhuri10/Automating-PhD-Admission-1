@@ -24,7 +24,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout2"
         android:layout_width="390dp"
-        android:layout_height="593dp"
+        android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,61 +33,6 @@
         tools:context=".MainActivity"
         android:background="#FFFFFF">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout3"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="361dp"
-            android:layout_height="90dp"
-            android:hint="fullname"
-            app:boxStrokeColor="@color/black"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/black"
-            app:helperText="*required"
-            app:helperTextTextColor="#DA0303"
-            app:hintTextColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.061">
-            app:layout_constraintTop_toTopOf="@id/layout2"
-            app:layout_constraintVertical_bias="0.08">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/RegisterFullName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textColor="@color/black"
-                tools:ignore="TouchTargetSizeCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout4"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="361dp"
-            android:layout_height="90dp"
-            android:hint="phone number"
-            app:boxStrokeColor="@color/black"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/black"
-            app:helperText="*required"
-            app:helperTextTextColor="#DA0303"
-            app:hintTextColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-            app:layout_constraintVertical_bias="0.05">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/PhoneText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textColor="@color/black"
-                tools:ignore="TouchTargetSizeCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout5"
@@ -104,12 +49,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.05"
             app:startIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/RegisterEmail"
+                android:id="@+id/InputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -137,7 +82,7 @@
             app:startIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/RegisterPassword"
+                android:id="@+id/InputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -150,7 +95,7 @@
             android:layout_width="130dp"
             android:layout_height="63dp"
             android:backgroundTint="#AF37A3"
-            android:text="Register"
+            android:text="Login"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
