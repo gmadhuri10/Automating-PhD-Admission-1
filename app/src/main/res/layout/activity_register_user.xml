@@ -41,9 +41,8 @@
             android:layout_width="361dp"
             android:layout_height="90dp"
             android:hint="First name"
+            android:layout_marginTop="20dp"
             app:boxStrokeColor="@color/black"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/black"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
             app:hintTextColor="@color/black"
@@ -70,8 +69,6 @@
             android:layout_height="90dp"
             android:hint="Last name"
             app:boxStrokeColor="@color/black"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/black"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
             app:hintTextColor="@color/black"
@@ -98,8 +95,6 @@
             android:layout_height="90dp"
             android:hint="Phone number"
             app:boxStrokeColor="@color/black"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/black"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
             app:hintTextColor="@color/black"
@@ -126,8 +121,6 @@
             android:layout_height="90dp"
             android:hint="Username"
             app:boxStrokeColor="@color/black"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/black"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
             app:hintTextColor="@color/black"
@@ -159,7 +152,7 @@
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
             app:hintTextColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/LoginBtn"
+            app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
@@ -176,7 +169,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/LoginBtn"
+            android:id="@+id/RegisterBtn"
             android:layout_width="130dp"
             android:layout_height="63dp"
             android:backgroundTint="#AF37A3"
@@ -200,6 +193,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.433" />
+
+        <TextView
+            android:id="@+id/Logintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registered User?"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterBtn"
+            app:layout_constraintVertical_bias="0.254" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

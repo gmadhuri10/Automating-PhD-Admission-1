@@ -14,17 +14,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Register=(TextView) findViewById(R.id.Register);
-        Login=(TextView) findViewById(R.id.Login);
+        Register=(TextView) findViewById(R.id.RegisterMain);
+        Login=(TextView) findViewById(R.id.LoginMain);
         Register.setOnClickListener(this);
 
     }
         public void onClick(View v){
             switch (v.getId()){
-                case R.id.Register:
+                case R.id.RegisterMain:
                     startActivity(new Intent(this,RegisterUser.class));
                     break;
-                case R.id.Login:
+                case R.id.LoginMain:
                     startActivity(new Intent(this,LoginUser.class));
                     break;
             }
