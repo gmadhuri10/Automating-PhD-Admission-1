@@ -13,7 +13,6 @@ import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView Register,Login;
-    private VideoView video;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Login=(TextView) findViewById(R.id.LoginMain);
         Register.setOnClickListener(this);
         Login.setOnClickListener(this);
-        video=(VideoView) findViewById(R.id.videoView);
-        video.setVideoURI(Uri.parse("https://www.youtube.com/watch?v=a3EiG1EZFh8&ab_channel=AmritaSchoolofBiotechnology"));
-        video.setMediaController(new MediaController(this));
-        video.start();
     }
         public void onClick(View v){
             switch (v.getId()){
