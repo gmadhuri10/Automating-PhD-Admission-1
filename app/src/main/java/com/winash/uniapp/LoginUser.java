@@ -71,10 +71,14 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                    if(un.contains("@uniapp.admin.com"))
-                        startActivity(new Intent(LoginUser.this,AdminHomePage.class));
-                    else
-                        startActivity(new Intent(LoginUser.this,ApplicantHomePage.class));
+                    if(un.contains("@uniapp.admin.com")) {
+                        startActivity(new Intent(LoginUser.this, AdminDashboard.class));
+                        finish();
+                    }
+                    else {
+                        startActivity(new Intent(LoginUser.this, ApplicantHomePage.class));
+                        finish();
+                    }
                     progress.setVisibility(View.GONE);
                 }else{
                     progress.setVisibility(View.GONE);
