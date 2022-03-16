@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniApp">
         <activity
+            android:name=".navigationui"
+            android:exported="false"
+            android:label="@string/title_activity_navigationui"
+            android:theme="@style/Theme.UniApp.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
