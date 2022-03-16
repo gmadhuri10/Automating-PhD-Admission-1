@@ -4,35 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1177A5"
+    android:background="@color/white"
     tools:context=".LoginUser">
 
     <TextView
         android:id="@+id/LoginHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#9CED0E0E"
+        android:text="UniApp"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout2"
-        android:layout_width="390dp"
-        android:layout_height="400dp"
+        android:layout_width="394dp"
+        android:layout_height="455dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/round_corner_template"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginHeader"
-        app:layout_constraintVertical_bias="0.25"
-        tools:context=".MainActivity"
-        android:background="@drawable/round_corner_template">
+        app:layout_constraintVertical_bias="1.0"
+        tools:context=".MainActivity">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -41,26 +45,26 @@
             android:layout_width="361dp"
             android:layout_height="90dp"
             android:hint="email"
-            app:boxStrokeColor="@color/black"
+            app:boxStrokeColor="@color/white"
             app:endIconMode="clear_text"
-            app:endIconTint="@color/black"
+            app:endIconTint="@color/white"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
-            app:hintTextColor="@color/black"
+            app:hintTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.551"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.112"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/InputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,26 +74,26 @@
             android:layout_width="361dp"
             android:layout_height="90dp"
             android:hint="password"
-            app:boxStrokeColor="@color/black"
+            app:boxStrokeColor="@color/white"
             app:endIconMode="password_toggle"
-            app:endIconTint="@color/black"
+            app:endIconTint="@color/white"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
-            app:hintTextColor="@color/black"
+            app:hintTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.551"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
             app:layout_constraintVertical_bias="0.102"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/InputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,19 +124,19 @@
             app:layout_constraintVertical_bias="0.433" />
 
         <TextView
-            android:id="@+id/RegisterText"
+            android:id="@+id/ResetText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New User?"
-            android:textColor="@color/black"
+            android:text="Forgot Password?"
+            android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/LoginBtn"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.224" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

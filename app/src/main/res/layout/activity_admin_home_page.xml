@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminHomePage">
+    tools:context=".AdminHomePage"
+    android:background="@color/white">
 
     <EditText
         android:id="@+id/editTextTextAdminName"
@@ -13,7 +14,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="244dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

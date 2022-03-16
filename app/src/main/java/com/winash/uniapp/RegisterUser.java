@@ -27,7 +27,6 @@ import org.w3c.dom.Text;
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
     private Button RegisterUser;
-    private TextView login;
     private EditText fname,lname,number,uname,pass;
     private ProgressBar progress;
     DatabaseReference RefApplicant;
@@ -45,9 +44,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         uname=(EditText) findViewById(R.id.Username);
         pass=(EditText) findViewById(R.id.Password);
         progress=(ProgressBar) findViewById(R.id.progressBarReg);
-        login=(TextView) findViewById(R.id.Logintext);
         RefApplicant= FirebaseDatabase.getInstance().getReference("Applicant");
-        login.setOnClickListener(this);
         RegisterUser.setOnClickListener(this);
     }
 
@@ -56,9 +53,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.RegisterBtn:
                 registeruser();
-                break;
-            case R.id.Logintext:
-                startActivity(new Intent(this,LoginUser.class));
                 break;
         }
     }
@@ -99,7 +93,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             pass.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()||email.contains("@uniapp.admin.com"))
         {
             uname.setError("Valid Email Required!!!");
             uname.requestFocus();
@@ -111,7 +105,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Applicant newapp=new Applicant(fn,ln,email,p,num);
+                            Applicant newapp=new Applicant(fn,ln,email,Integer.parseInt(num));
                             UserUniqueNumber=mAuth.getUid();
                             RefApplicant.child(UserUniqueNumber).setValue(newapp).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

@@ -4,83 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1177A5"
+    android:background="#FFFFFF"
     tools:context=".MainActivity"
     >
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="#9CED0E0E">
+
+        <TextView
+            android:id="@+id/MainHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="UniApp"
+            android:layout_marginLeft="20dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.121" />
+        <TextView
+            android:id="@+id/RegisterMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginLeft="130dp">
+        </TextView>
+            <TextView
+                android:id="@+id/LoginMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                >
+
+            </TextView>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UniApp"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:text="Welcome to Amrita University"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    </TextView>
-
-    <TextView
-        android:id="@+id/textView2"
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New users can register here"
-        android:textColor="@color/white"
-        android:textSize="30dp"
+        android:layout_height="271dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.062">
-
-    </TextView>
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
-        android:id="@+id/RegisterMain"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewcourse"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:textColor="@color/white"
-        android:textSize="40dp"
+        android:text="We offer various courses in different field of study. Register to our university to our apply for PhD"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.065">
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintVertical_bias="0.0" />
 
-    </TextView>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registered users can login here"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421">
-
-    </TextView>
-
-    <TextView
-        android:id="@+id/LoginMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.159"></TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>

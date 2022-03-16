@@ -19,34 +19,33 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginUser extends AppCompatActivity implements View.OnClickListener {
-    private TextView register;
     private EditText username,password;
     private Button login;
     private ProgressBar progress;
     private FirebaseAuth mAuth;
+    private TextView reset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_user);
         login=(Button)findViewById(R.id.LoginBtn);
-        register=(TextView) findViewById(R.id.RegisterText);
         username=(EditText) findViewById(R.id.InputEmail);
         password=(EditText) findViewById(R.id.InputPassword);
         progress=(ProgressBar) findViewById(R.id.progressBarLogin);
         mAuth=FirebaseAuth.getInstance();
         login.setOnClickListener(this);
-        register.setOnClickListener(this);
-
+        reset=(TextView) findViewById(R.id.ResetText);
+        reset.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.LoginBtn:
-                    userlogin();
+                userlogin();
                 break;
-            case R.id.RegisterText:
-                startActivity(new Intent(this,RegisterUser.class));
+            case R.id.ResetText:
+                startActivity(new Intent(LoginUser.this,ForgotPassword.class));
                 break;
         }
     }
