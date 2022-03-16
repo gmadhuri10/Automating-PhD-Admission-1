@@ -16,3 +16,9 @@
 ##  Softwares:
 - Android studio
 - firebase
+## Languages:
+- Java
+- XML
+## Data:
+- No sql in JSON format
+- 
