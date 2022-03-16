@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_gallery.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_main.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_slideshow.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\fragment_slideshow.xml"
+    },
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mycourse.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\fragment_mycourse.xml"
+    },
+    {
+        "merged": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\New folder\\Automating-PhD-Admission-1\\Mynavbar\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]
