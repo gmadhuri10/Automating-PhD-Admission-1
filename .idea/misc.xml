@@ -3,18 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/drawable/button.xml" value="0.1975" />
-        <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/drawable/round_corner_template.xml" value="0.1975" />
-        <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
-        <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/layout/login.xml" value="0.27447916666666666" />
-        <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/layout/register_applicant.xml" value="0.27447916666666666" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/user_ui.xml" value="0.19444444444444445" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/users.xml" value="0.19444444444444445" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK" />
 </project>
