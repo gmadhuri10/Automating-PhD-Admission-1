@@ -45,26 +45,27 @@
             android:layout_width="361dp"
             android:layout_height="90dp"
             android:hint="email"
-            app:boxStrokeColor="@color/white"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
             app:endIconMode="clear_text"
-            app:endIconTint="@color/white"
+            app:endIconTint="@color/black"
             app:helperText="*required"
             app:helperTextTextColor="#DA0303"
-            app:hintTextColor="@color/white"
+            app:hintTextColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.551"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.112"
-            app:startIconTint="@color/white">
+            app:startIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/InputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,26 +75,27 @@
             android:layout_width="361dp"
             android:layout_height="90dp"
             android:hint="password"
-            app:boxStrokeColor="@color/white"
+            app:boxStrokeColor="@color/black"
             app:endIconMode="password_toggle"
-            app:endIconTint="@color/white"
+            app:endIconTint="@color/black"
             app:helperText="*required"
+            android:textColorHint="@color/black"
             app:helperTextTextColor="#DA0303"
-            app:hintTextColor="@color/white"
+            app:hintTextColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.551"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
             app:layout_constraintVertical_bias="0.102"
-            app:startIconTint="@color/white">
+            app:startIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/InputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,7 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forgot Password?"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
