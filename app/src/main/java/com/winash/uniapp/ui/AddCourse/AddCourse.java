@@ -17,6 +17,7 @@ private TextView blah;
                              ViewGroup container, Bundle savedInstanceState) {
         View view = null;
         view = inflater.inflate(R.layout.fragment_add_course,container, false);
+
         return view;
     }
 }

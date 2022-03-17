@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#FFFFFF"
     tools:context=".LoginUser">
 
     <TextView
         android:id="@+id/LoginHeader"
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:background="#9CED0E0E"
+        android:background="@drawable/side_nav_bar"
         android:text="UniApp"
         android:textAlignment="center"
         android:textColor="@color/white"
