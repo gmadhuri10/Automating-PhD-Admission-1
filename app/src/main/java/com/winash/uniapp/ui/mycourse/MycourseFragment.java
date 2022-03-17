@@ -8,17 +8,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.winash.uniapp.databinding.FragmentSlideshowBinding;
+import com.winash.uniapp.databinding.FragmentMycourseBinding;
 
 public class MycourseFragment extends Fragment {
-    private FragmentSlideshowBinding binding;
+    private FragmentMycourseBinding binding;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentMycourseBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         return root;
