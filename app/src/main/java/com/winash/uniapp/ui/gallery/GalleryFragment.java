@@ -5,31 +5,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
 import com.winash.uniapp.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+private FragmentGalleryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+            ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+    binding = FragmentGalleryBinding.inflate(inflater, container, false);
+    View root = binding.getRoot();
+
         return root;
     }
 
-    @Override
+@Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;

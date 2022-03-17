@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/activity_main.xml" value="0.19444444444444445" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/app_bar_navigationui.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/content_navigationui.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/fragment_gallery.xml" value="0.15394013439218082" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/fragment_mycourse.xml" value="0.12360688956433637" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/fragment_search.xml" value="0.19444444444444445" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/fragment_slideshow.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/mycourse_fragment.xml" value="0.22146739130434784" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/layout/nav_header_navigationui.xml" value="0.22826086956521738" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/Automating-PhD-Admission-1/app/src/main/res/menu/navigationui.xml" value="0.25052083333333336" />
         <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/drawable/button.xml" value="0.1975" />
         <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/drawable/round_corner_template.xml" value="0.1975" />
         <entry key="..\:/SWE_Project/Automating-PhD-Admission/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
@@ -11,7 +23,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
