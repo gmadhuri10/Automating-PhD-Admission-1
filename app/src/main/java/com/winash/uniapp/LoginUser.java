@@ -79,9 +79,9 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
                         startActivity(new Intent(LoginUser.this, ApplicantHomePage.class));
                         finish();
                     }
-                    progress.setVisibility(View.GONE);
+                    progress.setVisibility(View.INVISIBLE);
                 }else{
-                    progress.setVisibility(View.GONE);
+                    progress.setVisibility(View.INVISIBLE);
                     Toast.makeText(LoginUser.this, "Please CHeck your credentials", Toast.LENGTH_SHORT).show();
                 }
             }

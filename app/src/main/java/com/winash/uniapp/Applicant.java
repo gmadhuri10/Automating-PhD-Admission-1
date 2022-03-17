@@ -2,7 +2,7 @@ package com.winash.uniapp;
 
 public class Applicant {
     public String fname,lname,email;
-    int phone;
+    public int phone;
     Applicant(String fname,String lname,String email,int phone){
         this.fname=fname;
         this.lname=lname;
