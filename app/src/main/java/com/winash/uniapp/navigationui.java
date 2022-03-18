@@ -11,9 +11,20 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.winash.uniapp.databinding.ActivityNavigationuiBinding;
 
+import android.widget.Button;
+import android.content.Intent;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class navigationui extends AppCompatActivity {
+
+
+
 
     private AppBarConfiguration mAppBarConfiguration;
 private ActivityNavigationuiBinding binding;
@@ -21,6 +32,9 @@ private ActivityNavigationuiBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
 
      binding = ActivityNavigationuiBinding.inflate(getLayoutInflater());
      setContentView(binding.getRoot());
@@ -44,6 +58,8 @@ private ActivityNavigationuiBinding binding;
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigationui);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
     }
 
     @Override
