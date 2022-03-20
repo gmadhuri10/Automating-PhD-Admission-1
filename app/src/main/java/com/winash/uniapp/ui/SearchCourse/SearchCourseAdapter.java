@@ -11,14 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.winash.uniapp.R;
+import com.winash.uniapp.ui.AddCourse.Course;
+
+import java.util.ArrayList;
 
 public class SearchCourseAdapter extends RecyclerView.Adapter<SearchCourseAdapter.MyViewHolder> {
-    public String a[];
-    public String b[];
+    public ArrayList<Course> list;
     public Context context;
-    public SearchCourseAdapter(String a[],String b[],Context context){
-        this.a=a;
-        this.b=b;
+
+    public SearchCourseAdapter(ArrayList<Course> a,Context context){
+        this.list=a;
         this.context=context;
     }
     @NonNull
@@ -31,22 +33,32 @@ public class SearchCourseAdapter extends RecyclerView.Adapter<SearchCourseAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.coursename.setText(a[position]);
-        holder.description.setText(b[position]);
+        Course course=list.get(position);
+        holder.coursename.setText(course.getCoursename());
+        holder.campus.setText(course.getCampus());
+        holder.syllabus.setText(course.getSyllabus());
     }
 
     @Override
     public int getItemCount() {
-        return a.length;
+        return list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView coursename,description;
+        TextView coursename,campus,syllabus;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             coursename=itemView.findViewById(R.id.CourseNameDisplay);
-            description=itemView.findViewById(R.id.CourseDescriptionDisplay);
+            campus=itemView.findViewById(R.id.CourseCampusDisplay);
+            syllabus=itemView.findViewById(R.id.CourseSyllabusDisplay);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getAdapterPosition();
+                }
+            });
         }
     }
 }

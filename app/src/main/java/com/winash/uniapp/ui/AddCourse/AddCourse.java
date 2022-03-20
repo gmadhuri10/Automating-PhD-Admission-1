@@ -61,9 +61,9 @@ private ProgressBar progress;
         String syllabus=Syllabus.getText().toString().trim();
         String campus=Campus.getText().toString().trim();
         String tempq10=q10th.getText().toString();
-        String tempq12=q10th.getText().toString();
-        String tempqug=q10th.getText().toString();
-        String tempqpg=q10th.getText().toString();
+        String tempq12=q12th.getText().toString();
+        String tempqug=qUG.getText().toString();
+        String tempqpg=qPG.getText().toString();
         int q10=Integer.parseInt(tempq10);
         int q12=Integer.parseInt(tempq12);
         float ug=Float.parseFloat(tempqug);
@@ -122,7 +122,7 @@ private ProgressBar progress;
             return;
         }
         progress.setVisibility(View.VISIBLE);
-        Course newcourse=new Course(coursename,department,duration,outcome,syllabus,campus,q10,q12,ug,pg);
+        Course newcourse=new Course(campus,coursename,department,duration,outcome,pg,q10,q12,syllabus,ug);
         ref.child("Course").child(coursename).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

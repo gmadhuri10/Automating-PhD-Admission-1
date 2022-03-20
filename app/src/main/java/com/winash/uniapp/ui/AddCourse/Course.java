@@ -6,21 +6,35 @@ public class Course {
     public String duration;
     public String outcome;
     public String syllabus;
+
+    public Course() {
+        this.coursename = null;
+        this.department = null;
+        this.duration = null;
+        this.outcome = null;
+        this.syllabus = null;
+        this.campus = null;
+        this.q10 = null;
+        this.q12 = null;
+        this.ug = null;
+        this.pg = null;
+    }
+
     public String campus;
-    public int q10;
-    public int q12;
-    public float ug;
-    public float pg;
-    Course(String coursename,
+    public Integer q10;
+    public Integer q12;
+    public Float ug;
+    public Float pg;
+    Course(String campus,String coursename,
             String department,
             String duration,
             String outcome,
+           Float pg,
+           Integer q10,
+           Integer q12,
             String syllabus,
-            String campus,
-            int q10,
-            int q12,
-            float ug,
-            float pg){
+           Float ug
+            ){
         this.coursename=coursename;
         this.department=department;
         this.duration=duration;
@@ -31,5 +45,45 @@ public class Course {
         this.q12=q12;
         this.ug=ug;
         this.pg=pg;
+    }
+
+    public String getCoursename() {
+        return coursename;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public String getOutcome() {
+        return outcome;
+    }
+
+    public String getSyllabus() {
+        return syllabus;
+    }
+
+    public String getCampus() {
+        return campus;
+    }
+
+    public Integer getQ10() {
+        return q10;
+    }
+
+    public Integer getQ12() {
+        return q12;
+    }
+
+    public Float getUg() {
+        return ug;
+    }
+
+    public Float getPg() {
+        return pg;
     }
 }

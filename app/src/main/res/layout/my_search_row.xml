@@ -15,11 +15,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="89dp"
             android:background="@color/white">
 
             <TextView
@@ -29,8 +31,9 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:text="Course Name"
+                android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="21dp"
+                android:textSize="19dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -40,11 +43,11 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/CourseDescriptionDisplay"
+                android:id="@+id/CourseCampusDisplay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:text="Description"
+                android:inputType="text"
+                android:text="Campus"
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -53,6 +56,21 @@
                 app:layout_constraintStart_toEndOf="@+id/CourseNameDisplay"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/CourseSyllabusDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:text="Syllabus"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.071"
+                app:layout_constraintStart_toEndOf="@+id/CourseNameDisplay"
+                app:layout_constraintTop_toBottomOf="@+id/CourseCampusDisplay"
+                app:layout_constraintVertical_bias="0.3" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,11 +11,11 @@
     >
 
     <SearchView
+        android:id="@+id/Search_course_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Search here"
         android:iconifiedByDefault="false"
-        android:id="@+id/Search_course_field">
+        android:queryHint="Search here">
 
     </SearchView>
 
