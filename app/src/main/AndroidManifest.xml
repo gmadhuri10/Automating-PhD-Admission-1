@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniApp">
         <activity
+            android:name=".AdminCourseUpdation"
+            android:exported="false" />
+        <activity
             android:name=".AdminCourseView"
             android:exported="false" />
         <activity
