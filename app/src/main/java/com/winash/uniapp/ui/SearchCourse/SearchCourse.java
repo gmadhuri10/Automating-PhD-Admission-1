@@ -56,7 +56,6 @@ public class SearchCourse extends Fragment {
                 catch (Exception e){
                     Toast.makeText(xyz.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
                 }
-
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

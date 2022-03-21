@@ -1,6 +1,8 @@
 package com.winash.uniapp.ui.AddCourse;
 
-public class Course {
+import java.io.Serializable;
+
+public class Course implements Serializable {
     public String coursename;
     public String department;
     public String duration;

@@ -67,7 +67,6 @@ private ProgressBar progress;
         String tempq12=q12th.getText().toString().trim();
         String tempqug=qUG.getText().toString().trim();
         String tempqpg=qPG.getText().toString().trim();
-        Toast.makeText(getActivity(), tempqug, Toast.LENGTH_SHORT).show();
         if(coursename.isEmpty())
         {
             CourseName.setError("Course Name Required!!!");
@@ -100,22 +99,22 @@ private ProgressBar progress;
             Campus.setError("Campus Name Required!!!");
             Campus.requestFocus();
             return;
-        }if(tempq10.isEmpty())
+        }if(tempq10.isEmpty()||!isInteger(tempq10))
         {
             q10th.setError("10th mark Required!!!");
             q10th.requestFocus();
             return;
-        }if(tempq12.isEmpty())
+        }if(tempq12.isEmpty()||!isInteger(tempq12))
         {
             q12th.setError("12th mark Required!!!");
             q12th.requestFocus();
             return;
-        }if(tempqug.isEmpty())
+        }if(tempqug.isEmpty()||!isInteger(tempqug))
         {
             qUG.setError("UG mark Required!!!");
             qUG.requestFocus();
             return;
-        }if(tempqpg.isEmpty())
+        }if(tempqpg.isEmpty()||!isInteger(tempqpg))
         {
             qPG.setError("PG mark Required!!!");
             qPG.requestFocus();
@@ -125,7 +124,6 @@ private ProgressBar progress;
         int q12=Integer.parseInt(tempq12);
         Double ug=Double.parseDouble(tempqug);
         Double pg=Double.parseDouble(tempqpg);
-        Toast.makeText(getContext(), pg.toString(), Toast.LENGTH_SHORT).show();
         progress.setVisibility(View.VISIBLE);
         Course newcourse=new Course(campus,coursename,department,duration,outcome,pg,q10,q12,syllabus,ug);
         ref.child("Course").child(coursename).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -143,5 +141,19 @@ private ProgressBar progress;
                 progress.setProgress(View.INVISIBLE);
             }
         });
+    }
+    public boolean isInteger(String s){
+        int flag=0;
+        char[] chars = s.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for(char c : chars){
+            if(Character.isDigit(c)){
+                flag++;
+            }
+        }
+        if(flag==s.length())
+            return true;
+        else
+            return false;
     }
 }
