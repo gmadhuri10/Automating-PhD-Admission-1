@@ -24,7 +24,7 @@ import com.winash.uniapp.LoginUser;
 import com.winash.uniapp.R;
 import com.winash.uniapp.RegisterUser;
 
-public class AddCourse extends Fragment implements View.OnClickListener {
+public class AddCourse extends Fragment {
 private TextView CourseName,Department,Duration,Outcome,Syllabus,Campus,q10th,q12th,qUG,qPG;
 private Button addcourse;
 private FirebaseAuth fAuth;
@@ -32,42 +32,42 @@ private DatabaseReference ref;
 private ProgressBar progress;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View view = null;
-        view = inflater.inflate(R.layout.fragment_add_course,container, false);
-        CourseName=(TextView) view.findViewById(R.id.InputCourseName);
-        Department=(TextView) view.findViewById(R.id.InputCourseDepartment);
-        Duration=(TextView) view.findViewById(R.id.InputCourseDuration);
-        Outcome=(TextView) view.findViewById(R.id.InputCourseOutcome);
-        Syllabus=(TextView) view.findViewById(R.id.InputCourseSyllabus);
-        Campus=(TextView) view.findViewById(R.id.InputCourseCampus);
-        q10th=(TextView) view.findViewById(R.id.InputCourse10th);
-        q12th=(TextView) view.findViewById(R.id.InputCourse12th);
-        qUG=(TextView) view.findViewById(R.id.InputCourseUG);
-        qPG=(TextView) view.findViewById(R.id.InputCoursePG);
-        addcourse=(Button) view.findViewById(R.id.AddCourserBtn);
+        View v = null;
+        v = inflater.inflate(R.layout.fragment_add_course,container, false);
+        CourseName=(TextView) v.findViewById(R.id.InputCourseName);
+        Department=(TextView) v.findViewById(R.id.InputCourseDepartment);
+        Duration=(TextView) v.findViewById(R.id.InputCourseDuration);
+        Outcome=(TextView) v.findViewById(R.id.InputCourseOutcome);
+        Syllabus=(TextView) v.findViewById(R.id.InputCourseSyllabus);
+        Campus=(TextView) v.findViewById(R.id.InputCourseCampus);
+        q10th=(TextView) v.findViewById(R.id.InputCourse10th);
+        q12th=(TextView) v.findViewById(R.id.InputCourse12th);
+        qUG=(TextView) v.findViewById(R.id.InputCourseUG);
+        qPG=(TextView) v.findViewById(R.id.InputCoursePG);
+        addcourse=(Button) v.findViewById(R.id.AddCourserBtn);
         fAuth=FirebaseAuth.getInstance();
         ref=FirebaseDatabase.getInstance().getReference();
-        progress=(ProgressBar) view.findViewById(R.id.progressBarAddCourse);
-        addcourse.setOnClickListener(this);
-        return view;
+        progress=(ProgressBar) v.findViewById(R.id.progressBarAddCourse);
+        addcourse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addcourse();
+            }
+        });
+        return v;
     }
-
-    @Override
-    public void onClick(View view) {
+    public void addcourse(){
         String coursename=CourseName.getText().toString().trim();
         String department=Department.getText().toString().trim();
         String duration=Duration.getText().toString().trim();
         String outcome=Outcome.getText().toString().trim();
         String syllabus=Syllabus.getText().toString().trim();
         String campus=Campus.getText().toString().trim();
-        String tempq10=q10th.getText().toString();
-        String tempq12=q12th.getText().toString();
-        String tempqug=qUG.getText().toString();
-        String tempqpg=qPG.getText().toString();
-        int q10=Integer.parseInt(tempq10);
-        int q12=Integer.parseInt(tempq12);
-        float ug=Float.parseFloat(tempqug);
-        float pg=Float.parseFloat(tempqpg);
+        String tempq10=q10th.getText().toString().trim();
+        String tempq12=q12th.getText().toString().trim();
+        String tempqug=qUG.getText().toString().trim();
+        String tempqpg=qPG.getText().toString().trim();
+        Toast.makeText(getActivity(), tempqug, Toast.LENGTH_SHORT).show();
         if(coursename.isEmpty())
         {
             CourseName.setError("Course Name Required!!!");
@@ -121,6 +121,11 @@ private ProgressBar progress;
             qPG.requestFocus();
             return;
         }
+        int q10=Integer.parseInt(tempq10);
+        int q12=Integer.parseInt(tempq12);
+        Double ug=Double.parseDouble(tempqug);
+        Double pg=Double.parseDouble(tempqpg);
+        Toast.makeText(getContext(), pg.toString(), Toast.LENGTH_SHORT).show();
         progress.setVisibility(View.VISIBLE);
         Course newcourse=new Course(campus,coursename,department,duration,outcome,pg,q10,q12,syllabus,ug);
         ref.child("Course").child(coursename).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {

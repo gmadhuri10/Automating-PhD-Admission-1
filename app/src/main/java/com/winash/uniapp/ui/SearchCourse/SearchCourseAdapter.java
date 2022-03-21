@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class SearchCourseAdapter extends RecyclerView.Adapter<SearchCourseAdapter.MyViewHolder> {
     public ArrayList<Course> list;
     public Context context;
-
     public SearchCourseAdapter(ArrayList<Course> a,Context context){
         this.list=a;
         this.context=context;
@@ -52,11 +51,10 @@ public class SearchCourseAdapter extends RecyclerView.Adapter<SearchCourseAdapte
             coursename=itemView.findViewById(R.id.CourseNameDisplay);
             campus=itemView.findViewById(R.id.CourseCampusDisplay);
             syllabus=itemView.findViewById(R.id.CourseSyllabusDisplay);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    getAdapterPosition();
+
                 }
             });
         }
