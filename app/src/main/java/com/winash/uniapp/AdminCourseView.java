@@ -16,7 +16,7 @@ import com.winash.uniapp.ui.SearchCourse.SearchCourse;
 
 public class AdminCourseView extends AppCompatActivity {
     private TextView coursename,coursecampus,department,duration,outcome,syllabus,ug,pg,q10,q12;
-    private Button del;
+    private Button del,upda;
     private DatabaseReference ref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class AdminCourseView extends AppCompatActivity {
     pg=(TextView) findViewById(R.id.CoursePGNew);
     q10=(TextView) findViewById(R.id.Course10thNew);
     q12=(TextView) findViewById(R.id.Course12thNew);
+    upda=(Button)findViewById(R.id.courseUpdationBtn);
     coursename.setText(now.getCoursename());
     coursecampus.setText(now.getCampus());
     department.setText(now.getDepartment());
@@ -50,8 +51,17 @@ public class AdminCourseView extends AppCompatActivity {
         public void onClick(View view) {
             ref.child("Course").child(now.getCoursename()).removeValue();
             Toast.makeText(AdminCourseView.this, "Course Successfully Removed", Toast.LENGTH_SHORT).show();
-            view.getContext().startActivity(new Intent(AdminCourseView.this, SearchCourse.class));
+            startActivity(new Intent(AdminCourseView.this,AdminDashboard.class));
             finish();
+        }
+    });
+    upda.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent up=new Intent(AdminCourseView.this,AdminCourseUpdation.class);
+            up.putExtra("coursee",now);
+                startActivity(up);
+                finish();
         }
     });
     }

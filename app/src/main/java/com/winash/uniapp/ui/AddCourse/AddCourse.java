@@ -101,38 +101,34 @@ private ProgressBar progress;
             return;
         }if(tempq10.isEmpty()||!isInteger(tempq10))
         {
-            q10th.setError("10th mark Required!!!");
+            q10th.setError("10th mark Invalid!!!");
             q10th.requestFocus();
             return;
         }if(tempq12.isEmpty()||!isInteger(tempq12))
         {
-            q12th.setError("12th mark Required!!!");
+            q12th.setError("12th mark Invalid!!!");
             q12th.requestFocus();
             return;
         }if(tempqug.isEmpty()||!isInteger(tempqug))
         {
-            qUG.setError("UG mark Required!!!");
+            qUG.setError("UG mark Invalid!!!");
             qUG.requestFocus();
             return;
         }if(tempqpg.isEmpty()||!isInteger(tempqpg))
         {
-            qPG.setError("PG mark Required!!!");
+            qPG.setError("PG mark Invalid!!!");
             qPG.requestFocus();
             return;
         }
-        int q10=Integer.parseInt(tempq10);
-        int q12=Integer.parseInt(tempq12);
-        Double ug=Double.parseDouble(tempqug);
-        Double pg=Double.parseDouble(tempqpg);
         progress.setVisibility(View.VISIBLE);
-        Course newcourse=new Course(campus,coursename,department,duration,outcome,pg,q10,q12,syllabus,ug);
+        Course newcourse=new Course(campus,coursename,department,duration,outcome,tempqpg,tempq10,tempq12,syllabus,tempqug);
         ref.child("Course").child(coursename).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getActivity(), "Course has been successfully Added", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getActivity(), AdminDashboard.class));
                     progress.setProgress(View.INVISIBLE);
+                    startActivity(new Intent(getActivity(), AdminDashboard.class));
                 }else
                 {
                     Toast.makeText(getActivity(), "An error Occured while Registering", Toast.LENGTH_SHORT).show();
@@ -147,7 +143,7 @@ private ProgressBar progress;
         char[] chars = s.toCharArray();
         StringBuilder sb = new StringBuilder();
         for(char c : chars){
-            if(Character.isDigit(c)){
+            if(Character.isDigit(c)||c=='.'){
                 flag++;
             }
         }

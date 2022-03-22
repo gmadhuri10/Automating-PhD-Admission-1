@@ -23,19 +23,19 @@ public class Course implements Serializable {
     }
 
     public String campus;
-    public Integer q10;
-    public Integer q12;
-    public Double ug;
-    public Double pg;
-    Course(String campus,String coursename,
+    public String q10;
+    public String q12;
+    public String ug;
+    public String pg;
+    public Course(String campus,String coursename,
             String department,
             String duration,
             String outcome,
-           Double pg,
-           Integer q10,
-           Integer q12,
+           String pg,
+           String q10,
+           String q12,
             String syllabus,
-           Double ug
+           String ug
             ){
         this.coursename=coursename;
         this.department=department;
@@ -73,19 +73,19 @@ public class Course implements Serializable {
         return campus;
     }
 
-    public Integer getQ10() {
+    public String getQ10() {
         return q10;
     }
 
-    public Integer getQ12() {
+    public String getQ12() {
         return q12;
     }
 
-    public Double getUg() {
+    public String getUg() {
         return ug;
     }
 
-    public Double getPg() {
+    public String getPg() {
         return pg;
     }
 }

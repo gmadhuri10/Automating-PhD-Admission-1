@@ -27,6 +27,7 @@ public class AdminHomePage extends AppCompatActivity {
             public void onClick(View view) {
                 mAuth.signOut();
                 startActivity(new Intent(AdminHomePage.this,LoginUser.class));
+                finish();
             }
         });
     }
