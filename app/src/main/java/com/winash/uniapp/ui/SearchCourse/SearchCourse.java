@@ -62,6 +62,24 @@ public class SearchCourse extends Fragment {
             }
         });
 
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                //adapter.getFilter().filter(null);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                ArrayList<Course> filteredlist = new ArrayList<>();
+                for(Course item: list){
+                    if(item.getCoursename().toLowerCase().contains(s.toLowerCase()))
+                        filteredlist.add(item);
+                }
+                adapter.filterList(filteredlist);
+                return false;
+            }
+        });
         return view;
     }
 }
