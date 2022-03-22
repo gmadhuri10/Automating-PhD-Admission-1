@@ -57,7 +57,7 @@ public class BlacklistAdapter extends RecyclerView.Adapter<BlacklistAdapter.MyVi
         DatabaseReference db;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            fname=itemView.findViewById(R.id.ApplicantlnameDisplay);
+            fname=itemView.findViewById(R.id.ApplicantNameDisplay);
             lname=itemView.findViewById(R.id.ApplicantlnameDisplay);
             email=itemView.findViewById(R.id.ApplicantEmail);
             phone=itemView.findViewById(R.id.applicantPhone);
