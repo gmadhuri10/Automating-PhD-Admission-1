@@ -44,7 +44,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         uname=(EditText) findViewById(R.id.Username);
         pass=(EditText) findViewById(R.id.Password);
         progress=(ProgressBar) findViewById(R.id.progressBarReg);
-        RefApplicant= FirebaseDatabase.getInstance().getReference("Applicant");
+        RefApplicant= FirebaseDatabase.getInstance().getReference();
         RegisterUser.setOnClickListener(this);
     }
 
@@ -105,26 +105,27 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Applicant newapp=new Applicant(fn,ln,email,Integer.parseInt(num));
+                            Applicant newapp=new Applicant(fn,ln,email,num,false,FirebaseAuth.getInstance().getUid());
                             UserUniqueNumber=mAuth.getUid();
-                            RefApplicant.child(UserUniqueNumber).setValue(newapp).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            RefApplicant.child("Applicant").child(UserUniqueNumber).setValue(newapp).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful())
                                     {
                                         Toast.makeText(RegisterUser.this, "Applicant has been successfully Registered", Toast.LENGTH_SHORT).show();
-                                        progress.setVisibility(View.GONE);
+                                        progress.setVisibility(View.INVISIBLE);
                                         startActivity(new Intent(RegisterUser.this,LoginUser.class));
+                                        finish();
                                     }else
                                     {
                                         Toast.makeText(RegisterUser.this, "Unsuccessful!!Try Again", Toast.LENGTH_SHORT).show();
-                                        progress.setVisibility(View.GONE);
+                                        progress.setVisibility(View.INVISIBLE);
                                     }
                                 }
                             });
                         }else {
                             Toast.makeText(RegisterUser.this, "Unsuccessful!!Try Again", Toast.LENGTH_SHORT).show();
-                            progress.setVisibility(View.GONE);
+                            progress.setVisibility(View.INVISIBLE);
                         }
                     }
                 });
@@ -152,4 +153,5 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         else
             return false;
     }
+
 }

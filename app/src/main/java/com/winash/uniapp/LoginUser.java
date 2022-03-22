@@ -17,12 +17,19 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.winash.uniapp.ui.AddCourse.Course;
 
 public class LoginUser extends AppCompatActivity implements View.OnClickListener {
     private EditText username,password;
     private Button login;
     private ProgressBar progress;
     private FirebaseAuth mAuth;
+    private DatabaseReference db;
     private TextView reset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,12 +83,33 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
                         finish();
                     }
                     else {
-                        startActivity(new Intent(LoginUser.this, ApplicantHomePage.class));
-                        finish();
+                        db= FirebaseDatabase.getInstance().getReference("Applicant");
+                        db.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                boolean d=false;
+                                for(DataSnapshot s:snapshot.getChildren()){
+                                    Applicant ds=s.getValue(Applicant.class);
+                                    if(ds.getApplicantid().equals(mAuth.getUid())) {
+                                        d = ds.isBlack();
+                                    }
+                                }
+                                if(!d) {
+                                    startActivity(new Intent(LoginUser.this, ApplicantHomePage.class));
+                                    finish();
+                                }
+                                else
+                                    Toast.makeText(LoginUser.this, "You have been blacklisted", Toast.LENGTH_SHORT).show();
+                                }
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                            }
+                        });
+
                     }
-                    progress.setVisibility(View.GONE);
+                    progress.setVisibility(View.INVISIBLE);
                 }else{
-                    progress.setVisibility(View.GONE);
+                    progress.setVisibility(View.INVISIBLE);
                     Toast.makeText(LoginUser.this, "Please CHeck your credentials", Toast.LENGTH_SHORT).show();
                 }
             }

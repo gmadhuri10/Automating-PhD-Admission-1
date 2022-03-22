@@ -26,5 +26,5 @@
         android:id="@+id/FAQ"
         android:name="com.winash.uniapp.ui.FAQ.FAQ"
         android:label="@string/menu_faq"
-        tools:layout="@layout/fragment_faq"/>
+        tools:layout="@layout/fragment_faq" />
 </navigation>
