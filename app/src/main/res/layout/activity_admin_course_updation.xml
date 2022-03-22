@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".AdminCourseUpdation"
     >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="14dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,8 +35,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Details:"
+            android:text="Course Details"
             android:layout_marginTop="10dp"
+            android:layout_gravity="center"
             android:textSize="20dp">
 
         </TextView>
@@ -43,6 +58,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updacampus"
+                android:paddingVertical="5dp"
+                android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="40dp">
             </EditText>
         </LinearLayout>
@@ -63,7 +80,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updadepartment"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/textfiled_border">
             </EditText>
         </LinearLayout>
         <LinearLayout
@@ -83,6 +102,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updaduration"
+                android:paddingVertical="5dp"
+                android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="38dp">
             </EditText>
         </LinearLayout>
@@ -105,7 +126,9 @@
                 android:id="@+id/updaoutcome"
                 android:scrollbars="vertical"
                 android:inputType="textMultiLine"
-                android:layout_marginLeft="32dp">
+                android:layout_marginLeft="32dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/textfiled_border">
             </EditText>
         </LinearLayout>
         <LinearLayout
@@ -127,13 +150,15 @@
                 android:inputType="textMultiLine"
                 android:id="@+id/updasyllabus"
                 android:scrollbars="vertical"
+                android:paddingVertical="5dp"
+                android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="40dp">
             </EditText>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Qualification Criteria:"
+            android:text="Course Qualification Criteria :"
             android:layout_marginTop="10dp"
             android:textSize="20dp">
 
@@ -155,6 +180,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/upda10th"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="20dp">
             </EditText>
         </LinearLayout>
@@ -170,13 +198,16 @@
                 android:layout_marginTop="10dp"
                 android:textSize="18dp">
             </TextView>
+
             <EditText
+                android:id="@+id/upda12th"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:id="@+id/upda12th"
-                android:layout_marginLeft="20dp">
-            </EditText>
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/textfiled_border"
+                android:layout_marginLeft="20dp"></EditText>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -190,13 +221,16 @@
                 android:layout_marginTop="10dp"
                 android:textSize="18dp">
             </TextView>
+
             <EditText
+                android:id="@+id/updapg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:id="@+id/updapg"
-                android:layout_marginLeft="33dp">
-            </EditText>
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/textfiled_border"
+                android:layout_marginLeft="33dp"></EditText>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -215,6 +249,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updaug"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="33dp">
             </EditText>
         </LinearLayout>
@@ -235,6 +272,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updadeadline"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="33dp">
             </EditText>
         </LinearLayout>
@@ -252,5 +292,5 @@
 
         </TextView>
     </LinearLayout>
-
+    </androidx.cardview.widget.CardView>
 </ScrollView>
