@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.winash.uniapp.ui.AddCourse.Course;
 
 public class AdminCourseUpdation extends AppCompatActivity {
-    private EditText coursename,coursecampus,department,duration,outcome,syllabus,ug,pg,q10,q12;
+    private EditText coursename,coursecampus,department,duration,outcome,syllabus,ug,pg,q10,q12,dead;
     private Button update;
     private DatabaseReference ref;
     @Override
@@ -38,6 +38,8 @@ public class AdminCourseUpdation extends AppCompatActivity {
         q10=(EditText) findViewById(R.id.upda10th);
         q12=(EditText) findViewById(R.id.upda12th);
         update=(Button)findViewById(R.id.buttoninsideupdate);
+        dead=(EditText) findViewById(R.id.updadeadline);
+        dead.setText(now.getDeadline());
         coursename.setText(now.getCoursename());
         coursecampus.setText(now.getCampus());
         department.setText(now.getDepartment());
@@ -69,6 +71,7 @@ public class AdminCourseUpdation extends AppCompatActivity {
         String tempq12=q12.getText().toString().trim();
         String tempqug=ug.getText().toString().trim();
         String tempqpg=pg.getText().toString().trim();
+        String deadline=dead.getText().toString();
 
         if(cn.isEmpty())
         {
@@ -123,7 +126,13 @@ public class AdminCourseUpdation extends AppCompatActivity {
             pg.requestFocus();
             return;
         }
-        Course newcourse=new Course(c,cn,d,du,out,tempqpg,tempq10,tempq12,sy,tempqug);
+        if(deadline.isEmpty())
+        {
+            dead.setError("Date Required!!!");
+            dead.requestFocus();
+            return;
+        }
+        Course newcourse=new Course(c,cn,d,du,out,tempqpg,tempq10,tempq12,sy,tempqug,deadline);
         ref.child("Course").child(cn).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

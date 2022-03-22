@@ -15,7 +15,7 @@ import com.winash.uniapp.ui.AddCourse.Course;
 import com.winash.uniapp.ui.SearchCourse.SearchCourse;
 
 public class AdminCourseView extends AppCompatActivity {
-    private TextView coursename,coursecampus,department,duration,outcome,syllabus,ug,pg,q10,q12;
+    private TextView coursename,coursecampus,department,duration,outcome,syllabus,ug,pg,q10,q12,dead;
     private Button del,upda;
     private DatabaseReference ref;
     @Override
@@ -34,12 +34,14 @@ public class AdminCourseView extends AppCompatActivity {
     q10=(TextView) findViewById(R.id.Course10thNew);
     q12=(TextView) findViewById(R.id.Course12thNew);
     upda=(Button)findViewById(R.id.courseUpdationBtn);
+    dead=(TextView)findViewById(R.id.updadeadlineview);
     coursename.setText(now.getCoursename());
     coursecampus.setText(now.getCampus());
     department.setText(now.getDepartment());
     duration.setText(now.getDuration());
     outcome.setText(now.getOutcome());
     syllabus.setText(now.getSyllabus());
+    dead.setText(now.getDeadline());
     ug.setText(now.getUg().toString());
     pg.setText(now.getPg().toString());
     q10.setText(now.getQ10().toString());

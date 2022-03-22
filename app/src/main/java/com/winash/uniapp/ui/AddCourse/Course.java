@@ -8,6 +8,7 @@ public class Course implements Serializable {
     public String duration;
     public String outcome;
     public String syllabus;
+    public String deadline;
 
     public Course() {
         this.coursename = null;
@@ -20,6 +21,7 @@ public class Course implements Serializable {
         this.q12 = null;
         this.ug = null;
         this.pg = null;
+        this.deadline=null;
     }
 
     public String campus;
@@ -27,15 +29,21 @@ public class Course implements Serializable {
     public String q12;
     public String ug;
     public String pg;
-    public Course(String campus,String coursename,
-            String department,
-            String duration,
-            String outcome,
-           String pg,
-           String q10,
-           String q12,
-            String syllabus,
-           String ug
+
+    public String getDeadline() {
+        return deadline;
+    }
+
+    public Course(String campus, String coursename,
+                  String department,
+                  String duration,
+                  String outcome,
+                  String pg,
+                  String q10,
+                  String q12,
+                  String syllabus,
+                  String ug,
+                  String deadline
             ){
         this.coursename=coursename;
         this.department=department;
@@ -47,6 +55,7 @@ public class Course implements Serializable {
         this.q12=q12;
         this.ug=ug;
         this.pg=pg;
+        this.deadline=deadline;
     }
 
     public String getCoursename() {

@@ -25,7 +25,7 @@ import com.winash.uniapp.R;
 import com.winash.uniapp.RegisterUser;
 
 public class AddCourse extends Fragment {
-private TextView CourseName,Department,Duration,Outcome,Syllabus,Campus,q10th,q12th,qUG,qPG;
+private TextView CourseName,Department,Duration,Outcome,Syllabus,Campus,q10th,q12th,qUG,qPG,Deadline;
 private Button addcourse;
 private FirebaseAuth fAuth;
 private DatabaseReference ref;
@@ -48,6 +48,7 @@ private ProgressBar progress;
         fAuth=FirebaseAuth.getInstance();
         ref=FirebaseDatabase.getInstance().getReference();
         progress=(ProgressBar) v.findViewById(R.id.progressBarAddCourse);
+        Deadline=(TextView) v.findViewById(R.id.InputCourseDeadline);
         addcourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +68,7 @@ private ProgressBar progress;
         String tempq12=q12th.getText().toString().trim();
         String tempqug=qUG.getText().toString().trim();
         String tempqpg=qPG.getText().toString().trim();
+        String dead=Deadline.getText().toString().trim();
         if(coursename.isEmpty())
         {
             CourseName.setError("Course Name Required!!!");
@@ -120,8 +122,14 @@ private ProgressBar progress;
             qPG.requestFocus();
             return;
         }
+        if(dead.isEmpty())
+        {
+            Deadline.setError("Date Invalid!!!");
+            Deadline.requestFocus();
+            return;
+        }
         progress.setVisibility(View.VISIBLE);
-        Course newcourse=new Course(campus,coursename,department,duration,outcome,tempqpg,tempq10,tempq12,syllabus,tempqug);
+        Course newcourse=new Course(campus,coursename,department,duration,outcome,tempqpg,tempq10,tempq12,syllabus,tempqug,dead);
         ref.child("Course").child(coursename).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

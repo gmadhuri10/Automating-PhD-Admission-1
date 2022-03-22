@@ -218,6 +218,26 @@
                 android:layout_marginLeft="33dp">
             </EditText>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deadline:"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp">
+            </TextView>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/updadeadline"
+                android:layout_marginLeft="33dp">
+            </EditText>
+        </LinearLayout>
 
         <Button
             android:id="@+id/buttoninsideupdate"
