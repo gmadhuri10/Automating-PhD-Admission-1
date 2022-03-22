@@ -28,6 +28,10 @@ public class SearchCourseAdapter extends RecyclerView.Adapter<SearchCourseAdapte
         this.list=a;
         this.context=context;
     }
+    public void filterList (ArrayList<Course> filterlist){
+        list=filterlist;
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
