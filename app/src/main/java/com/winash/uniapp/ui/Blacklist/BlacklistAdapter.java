@@ -31,6 +31,10 @@ public class BlacklistAdapter extends RecyclerView.Adapter<BlacklistAdapter.MyVi
         this.list=a;
         this.context=context;
     }
+    public void filterList (ArrayList<Applicant> filterlist){
+        list=filterlist;
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public BlacklistAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
