@@ -105,7 +105,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Applicant newapp=new Applicant(fn,ln,email,Integer.parseInt(num));
+                            Applicant newapp=new Applicant(fn,ln,email,num,false,FirebaseAuth.getInstance().getUid());
                             UserUniqueNumber=mAuth.getUid();
                             RefApplicant.child("Applicant").child(UserUniqueNumber).setValue(newapp).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

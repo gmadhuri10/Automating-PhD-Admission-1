@@ -55,6 +55,10 @@ public class AdminDashboard extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
     }
+    @Override
+    public void onBackPressed () {
+
+    }
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_logout:
