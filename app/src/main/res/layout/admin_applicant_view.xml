@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/white"
-    android:paddingBottom="20dp">
+    android:paddingBottom="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -16,8 +16,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/white"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="5dp">
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,10 +32,15 @@
                 android:id="@+id/ApplicantNameDisplay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/textfiled_border"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
                 android:gravity="center"
                 android:inputType="text"
                 android:minHeight="48dp"
+                android:padding="5dp"
                 android:text="First Name"
+
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -48,6 +57,9 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:text="lname"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:background="@drawable/textfiled_border"
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -55,11 +67,11 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ApplicantNameDisplay"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.2" />
 
             <TextView
                 android:id="@+id/ApplicantEmail"
-                android:layout_width="250dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:inputType="textMultiLine"
@@ -67,6 +79,8 @@
                 android:text="Email"
                 android:textColor="@color/black"
                 android:textSize="15dp"
+                android:padding="5dp"
+                android:background="@drawable/textfiled_border"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -76,10 +90,13 @@
 
             <TextView
                 android:id="@+id/applicantPhone"
-                android:layout_width="250dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:background="@drawable/textfiled_border"
                 android:inputType="textMultiLine"
+                android:padding="5dp"
+
                 android:scrollbars="vertical"
                 android:text="Phonenumber"
                 android:textColor="@color/black"
@@ -89,21 +106,24 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/ApplicantNameDisplay"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.444" />
+                app:layout_constraintVertical_bias="0.622" />
 
             <Button
                 android:id="@+id/blacklist_applicant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_corner_template"
                 android:text="Blacklist"
                 android:textSize="10dp"
-                android:layout_marginTop="80dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.982"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/ApplicantlnameDisplay"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
