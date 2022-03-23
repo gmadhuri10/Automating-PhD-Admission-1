@@ -193,6 +193,7 @@
                 android:layout_gravity="center"
                 android:id="@+id/upda10th"
                 android:padding="5dp"
+                android:inputType="number"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="20dp">
             </EditText>
@@ -215,6 +216,7 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:inputType="number"
                 android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="20dp"></EditText>
@@ -237,6 +239,7 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:inputType="number"
                 android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="33dp"></EditText>
@@ -257,6 +260,7 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:inputType="number"
                 android:id="@+id/updaug"
                 android:padding="5dp"
                 android:background="@drawable/textfiled_border"

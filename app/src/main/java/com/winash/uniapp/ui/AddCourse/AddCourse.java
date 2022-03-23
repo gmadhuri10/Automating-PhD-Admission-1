@@ -108,22 +108,22 @@ private ProgressBar progress;
             Campus.setError("Campus Name Required!!!");
             Campus.requestFocus();
             return;
-        }if(tempq10.isEmpty()||!isInteger(tempq10))
+        }if(tempq10.isEmpty()||!isInteger(tempq10)||tempq10.length()>2)
         {
             q10th.setError("10th mark Invalid!!!");
             q10th.requestFocus();
             return;
-        }if(tempq12.isEmpty()||!isInteger(tempq12))
+        }if(tempq12.isEmpty()||!isInteger(tempq12)||tempq12.length()>2)
         {
             q12th.setError("12th mark Invalid!!!");
             q12th.requestFocus();
             return;
-        }if(tempqug.isEmpty()||!isInteger(tempqug))
+        }if(tempqug.isEmpty()||!floatchecker(tempqug))
         {
             qUG.setError("UG mark Invalid!!!");
             qUG.requestFocus();
             return;
-        }if(tempqpg.isEmpty()||!isInteger(tempqpg))
+        }if(tempqpg.isEmpty()||!floatchecker(tempqpg))
         {
             qPG.setError("PG mark Invalid!!!");
             qPG.requestFocus();
@@ -160,7 +160,7 @@ private ProgressBar progress;
         char[] chars = s.toCharArray();
         StringBuilder sb = new StringBuilder();
         for(char c : chars){
-            if(Character.isDigit(c)||c=='.'){
+            if(Character.isDigit(c)){
                 flag++;
             }
         }
@@ -177,5 +177,19 @@ private ProgressBar progress;
             return false;
         }
         return true;
+    }
+    public boolean floatchecker(String a){
+        int flag=0;
+        char[] chars = a.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for(char c : chars){
+            if(c=='.'){
+                flag++;
+            }
+        }
+        if(flag==1)
+            return true;
+        else
+            return false;
     }
 }
