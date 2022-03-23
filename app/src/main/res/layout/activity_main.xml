@@ -73,7 +73,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/welcom"
+        android:id="@+id/MainHeader"
         android:layout_width="319dp"
         android:layout_height="41dp"
         android:layout_marginBottom="12dp"
@@ -100,17 +100,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeader"
+        app:layout_constraintTop_toTopOf="@+id/MainHeader"
         app:layout_constraintVertical_bias="0.53" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="411dp"
         android:layout_height="193dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewcourse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/untitled1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

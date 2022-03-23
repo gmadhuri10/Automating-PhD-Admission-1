@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddCourse.AddCourse"
+    android:orientation="vertical"
+    android:background="#DFDFDF"
+    >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,27 +17,25 @@
     tools:context=".RegisterUser"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/RegisterHeader"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:background="@drawable/side_nav_bar"
-        android:text="UniApp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewcourse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/untitled1" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textColor="#ff6200ee"
+        android:text="Register"
+        android:textSize="30dp"
         android:layout_gravity="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,8 +49,13 @@
         android:layout_width="374dp"
         android:layout_height="583dp"
         android:layout_gravity="center"
-        android:background="@drawable/round_corner_template"
-        app:cardCornerRadius="10dp"
+        android:background="@color/white"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
@@ -56,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingVertical="8dp"
             android:orientation="vertical"
             android:paddingHorizontal="6dp">
 
@@ -201,7 +214,7 @@
                 android:id="@+id/RegisterBtn"
                 android:layout_width="130dp"
                 android:layout_height="63dp"
-                android:backgroundTint="#AF37A3"
+                android:background="@drawable/side_nav_bar"
                 android:text="Register"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -222,8 +235,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.433" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
 
+            </TextView>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
 
+    </TextView>
 </LinearLayout>
+</ScrollView>
