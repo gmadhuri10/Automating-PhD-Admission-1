@@ -24,14 +24,13 @@
             android:id="@+id/input"/>
 
         <ImageView
+            android:id="@+id/add"
             android:layout_width="40sp"
             android:layout_height="40sp"
-            android:layout_toRightOf="@+id/input"
-            android:id="@+id/add"
-            android:layout_marginLeft="7sp"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_baseline_playlist_add_check_24"
-            />
+            android:layout_marginLeft="7sp"
+            android:layout_toRightOf="@+id/input"
+            android:src="@drawable/ic_baseline_playlist_add_check_24" />
 
     </RelativeLayout>
 
