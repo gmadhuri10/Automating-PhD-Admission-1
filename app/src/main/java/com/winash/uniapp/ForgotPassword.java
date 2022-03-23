@@ -49,6 +49,7 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
             email.requestFocus();
             return;
         }
+        reset.setVisibility(View.GONE);
         progress.setVisibility(View.VISIBLE);
         fAuth.sendPasswordResetEmail(em).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -58,6 +59,7 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
                     progress.setVisibility(View.GONE);
                     startActivity(new Intent(ForgotPassword.this,LoginUser.class));
                 } else {
+                    reset.setVisibility(View.VISIBLE);
                     Toast.makeText(ForgotPassword.this, "Some Error Occured", Toast.LENGTH_SHORT).show();
                     progress.setVisibility(View.GONE);
                 }

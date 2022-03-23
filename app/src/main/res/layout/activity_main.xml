@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#34CAC5C5"
     tools:context=".MainActivity"
     >
 
@@ -19,7 +19,6 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewcourse"
         app:layout_constraintVertical_bias="0.263"></TextView>
@@ -40,32 +39,34 @@
 
     <TextView
         android:id="@+id/RegisterMain"
-        android:layout_width="97dp"
-        android:layout_height="37dp"
-        android:background="#ff6200ee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:backgroundTint="#ff6200ee"
+        android:padding="10dp"
         android:text="Register"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logintext"
         app:layout_constraintVertical_bias="0.479"></TextView>
 
     <TextView
         android:id="@+id/LoginMain"
-        android:layout_width="106dp"
-        android:layout_height="32dp"
-        android:background="#ff6200ee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:backgroundTint="#ff6200ee"
         android:text="Login"
+        android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logintext"
         app:layout_constraintVertical_bias="0.086">

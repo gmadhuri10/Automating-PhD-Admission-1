@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -23,6 +24,12 @@ import com.winash.uniapp.AdminDashboard;
 import com.winash.uniapp.LoginUser;
 import com.winash.uniapp.R;
 import com.winash.uniapp.RegisterUser;
+
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class AddCourse extends Fragment {
 private TextView CourseName,Department,Duration,Outcome,Syllabus,Campus,q10th,q12th,qUG,qPG,Deadline;
@@ -122,13 +129,14 @@ private ProgressBar progress;
             qPG.requestFocus();
             return;
         }
-        if(dead.isEmpty())
+        if(dead.isEmpty()||isValid(dead))
         {
             Deadline.setError("Date Invalid!!!");
             Deadline.requestFocus();
             return;
         }
         progress.setVisibility(View.VISIBLE);
+        addcourse.setVisibility(View.GONE);
         Course newcourse=new Course(campus,coursename,department,duration,outcome,tempqpg,tempq10,tempq12,syllabus,tempqug,dead);
         ref.child("Course").child(coursename).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -139,6 +147,7 @@ private ProgressBar progress;
                     startActivity(new Intent(getActivity(), AdminDashboard.class));
                 }else
                 {
+                    addcourse.setVisibility(View.VISIBLE);
                     Toast.makeText(getActivity(), "An error Occured while Registering", Toast.LENGTH_SHORT).show();
                     progress.setProgress(View.INVISIBLE);
                 }
@@ -159,5 +168,14 @@ private ProgressBar progress;
             return true;
         else
             return false;
+    }
+    public boolean isValid(String dateStr) {
+        Date date = null;
+        try {
+            date = new SimpleDateFormat("dd/MM/yyyy").parse(dateStr);
+        } catch (Exception ex) {
+            return false;
+        }
+        return true;
     }
 }

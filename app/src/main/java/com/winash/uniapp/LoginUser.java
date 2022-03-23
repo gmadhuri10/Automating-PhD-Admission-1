@@ -72,6 +72,7 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
             username.requestFocus();
             return;
         }
+        login.setVisibility(View.GONE);
         progress.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(un,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -109,6 +110,7 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
                     }
                     progress.setVisibility(View.INVISIBLE);
                 }else{
+                    login.setVisibility(View.VISIBLE);
                     progress.setVisibility(View.INVISIBLE);
                     Toast.makeText(LoginUser.this, "Please CHeck your credentials", Toast.LENGTH_SHORT).show();
                 }

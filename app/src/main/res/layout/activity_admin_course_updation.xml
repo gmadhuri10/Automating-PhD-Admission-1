@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminCourseUpdation"
+    android:background="#34CAC5C5"
+    android:padding="10dp"
     >
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -23,14 +25,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
 
+        android:paddingHorizontal="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+
+        </TextView>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_gravity="center"
-            android:id="@+id/updacn">
+            android:id="@+id/updacn"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="#ff6200ee"
+            >
         </EditText>
         <TextView
             android:layout_width="wrap_content"
@@ -58,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updacampus"
-                android:paddingVertical="5dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="40dp">
             </EditText>
@@ -81,7 +93,7 @@
                 android:layout_gravity="center"
                 android:id="@+id/updadepartment"
                 android:layout_marginLeft="10dp"
-                android:paddingVertical="5dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border">
             </EditText>
         </LinearLayout>
@@ -102,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updaduration"
-                android:paddingVertical="5dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="38dp">
             </EditText>
@@ -121,13 +133,13 @@
             </TextView>
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updaoutcome"
                 android:scrollbars="vertical"
                 android:inputType="textMultiLine"
                 android:layout_marginLeft="32dp"
-                android:paddingVertical="5dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border">
             </EditText>
         </LinearLayout>
@@ -145,12 +157,12 @@
             </TextView>
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:inputType="textMultiLine"
                 android:id="@+id/updasyllabus"
                 android:scrollbars="vertical"
-                android:paddingVertical="5dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="40dp">
             </EditText>
@@ -176,12 +188,11 @@
                 android:textSize="18dp">
             </TextView>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/upda10th"
-                android:paddingVertical="5dp"
-                android:paddingHorizontal="10dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="20dp">
             </EditText>
@@ -201,11 +212,10 @@
 
             <EditText
                 android:id="@+id/upda12th"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingVertical="5dp"
-                android:paddingHorizontal="10dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="20dp"></EditText>
         </LinearLayout>
@@ -224,11 +234,10 @@
 
             <EditText
                 android:id="@+id/updapg"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingVertical="5dp"
-                android:paddingHorizontal="10dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="33dp"></EditText>
         </LinearLayout>
@@ -245,12 +254,11 @@
                 android:textSize="18dp">
             </TextView>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updaug"
-                android:paddingVertical="5dp"
-                android:paddingHorizontal="10dp"
+                android:padding="5dp"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="33dp">
             </EditText>
@@ -268,12 +276,12 @@
                 android:textSize="20dp">
             </TextView>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/updadeadline"
-                android:paddingVertical="5dp"
-                android:paddingHorizontal="10dp"
+                android:padding="5dp"
+                android:inputType="datetime"
                 android:background="@drawable/textfiled_border"
                 android:layout_marginLeft="33dp">
             </EditText>
@@ -285,6 +293,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
+            android:background="@drawable/side_nav_bar"
             android:text="Update" />
         <TextView
             android:layout_width="match_parent"

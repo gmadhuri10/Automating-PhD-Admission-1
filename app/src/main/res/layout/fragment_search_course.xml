@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.SearchCourse.SearchCourse"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="#34CAC5C5"
     android:padding="20dp"
     >
 
@@ -23,8 +23,7 @@
         android:id="@+id/Search_Recycler_View"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/Search_course_field"
-        >
+        android:layout_below="@+id/Search_course_field">
 
     </androidx.recyclerview.widget.RecyclerView>
 
