@@ -17,6 +17,7 @@ import com.winash.uniapp.databinding.ActivityNavigationuiBinding;
 
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,17 +44,22 @@ public class navigationui extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_mycourse)
-                .setOpenableLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigationui);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+        try {
+            DrawerLayout drawer = binding.drawerLayout;
+            NavigationView navigationView = binding.navView;
+            // Passing each menu ID as a set of Ids because each
+            // menu should be considered as top level destinations.
+            mAppBarConfiguration = new AppBarConfiguration.Builder(
+                    R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_mycourse)
+                    .setOpenableLayout(drawer)
+                    .build();
+            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigationui);
+            NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+            NavigationUI.setupWithNavController(navigationView, navController);
+        }catch (Exception e)
+        {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
