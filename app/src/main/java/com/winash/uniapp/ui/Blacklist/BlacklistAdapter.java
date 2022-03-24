@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,10 @@ public class BlacklistAdapter extends RecyclerView.Adapter<BlacklistAdapter.MyVi
         this.list=a;
         this.context=context;
     }
+    public void filterList (ArrayList<Applicant> filterlist){
+        list=filterlist;
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public BlacklistAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -42,9 +47,12 @@ public class BlacklistAdapter extends RecyclerView.Adapter<BlacklistAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull BlacklistAdapter.MyViewHolder holder, int position) {
         holder.email.setText(list.get(position).getEmail().toString());
-        holder.fname.setText(list.get(position).getFname().toString());
-        holder.lname.setText(list.get(position).getLname().toString());
+        holder.fname.setText(list.get(position).getFname().toString()+" "+list.get(position).getLname().toString());
         holder.phone.setText(list.get(position).getPhone().toString());
+            if (list.get(position).isBlack())
+                holder.blacklistedd.setVisibility(View.VISIBLE);
+            else
+                holder.blacklistedd.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -53,20 +61,21 @@ public class BlacklistAdapter extends RecyclerView.Adapter<BlacklistAdapter.MyVi
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView fname,lname,email,phone;
+        TextView fname,email,phone;
+        ImageView blacklistedd;
         DatabaseReference db;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            fname=itemView.findViewById(R.id.ApplicantlnameDisplay);
-            lname=itemView.findViewById(R.id.ApplicantlnameDisplay);
-            email=itemView.findViewById(R.id.ApplicantEmail);
-            phone=itemView.findViewById(R.id.applicantPhone);
+            fname=(TextView) itemView.findViewById(R.id.ApplicantNameDisplay);
+            email=(TextView) itemView.findViewById(R.id.ApplicantEmail);
+            phone=(TextView) itemView.findViewById(R.id.applicantPhone);
+            blacklistedd=(ImageView) itemView.findViewById(R.id.blacklisteddd);
 
             itemView.findViewById(R.id.blacklist_applicant).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     db= FirebaseDatabase.getInstance().getReference("Applicant");
-                    db.child(list.get(getAdapterPosition()).getApplicantid()).child("black").setValue(true);
+                    db.child(list.get(getAdapterPosition()).getApplicantid()).child("black").setValue(!(list.get(getAdapterPosition()).isBlack()));
                     list.clear();
                     view.getContext().startActivity(new Intent(view.getContext(), AdminDashboard.class));
                 }

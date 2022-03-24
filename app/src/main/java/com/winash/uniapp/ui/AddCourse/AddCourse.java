@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -23,6 +24,12 @@ import com.winash.uniapp.AdminDashboard;
 import com.winash.uniapp.LoginUser;
 import com.winash.uniapp.R;
 import com.winash.uniapp.RegisterUser;
+
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class AddCourse extends Fragment {
 private TextView CourseName,Department,Duration,Outcome,Syllabus,Campus,q10th,q12th,qUG,qPG,Deadline;
@@ -101,34 +108,35 @@ private ProgressBar progress;
             Campus.setError("Campus Name Required!!!");
             Campus.requestFocus();
             return;
-        }if(tempq10.isEmpty()||!isInteger(tempq10))
+        }if(tempq10.isEmpty()||!isInteger(tempq10)||tempq10.length()>2)
         {
             q10th.setError("10th mark Invalid!!!");
             q10th.requestFocus();
             return;
-        }if(tempq12.isEmpty()||!isInteger(tempq12))
+        }if(tempq12.isEmpty()||!isInteger(tempq12)||tempq12.length()>2)
         {
             q12th.setError("12th mark Invalid!!!");
             q12th.requestFocus();
             return;
-        }if(tempqug.isEmpty()||!isInteger(tempqug))
+        }if(tempqug.isEmpty()||!floatchecker(tempqug))
         {
             qUG.setError("UG mark Invalid!!!");
             qUG.requestFocus();
             return;
-        }if(tempqpg.isEmpty()||!isInteger(tempqpg))
+        }if(tempqpg.isEmpty()||!floatchecker(tempqpg))
         {
             qPG.setError("PG mark Invalid!!!");
             qPG.requestFocus();
             return;
         }
-        if(dead.isEmpty())
+        if(dead.isEmpty()||isValid(dead))
         {
             Deadline.setError("Date Invalid!!!");
             Deadline.requestFocus();
             return;
         }
         progress.setVisibility(View.VISIBLE);
+        addcourse.setVisibility(View.GONE);
         Course newcourse=new Course(campus,coursename,department,duration,outcome,tempqpg,tempq10,tempq12,syllabus,tempqug,dead);
         ref.child("Course").child(coursename).setValue(newcourse).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -139,6 +147,7 @@ private ProgressBar progress;
                     startActivity(new Intent(getActivity(), AdminDashboard.class));
                 }else
                 {
+                    addcourse.setVisibility(View.VISIBLE);
                     Toast.makeText(getActivity(), "An error Occured while Registering", Toast.LENGTH_SHORT).show();
                     progress.setProgress(View.INVISIBLE);
                 }
@@ -151,11 +160,34 @@ private ProgressBar progress;
         char[] chars = s.toCharArray();
         StringBuilder sb = new StringBuilder();
         for(char c : chars){
-            if(Character.isDigit(c)||c=='.'){
+            if(Character.isDigit(c)){
                 flag++;
             }
         }
         if(flag==s.length())
+            return true;
+        else
+            return false;
+    }
+    public boolean isValid(String dateStr) {
+        Date date = null;
+        try {
+            date = new SimpleDateFormat("dd/MM/yyyy").parse(dateStr);
+        } catch (Exception ex) {
+            return false;
+        }
+        return true;
+    }
+    public boolean floatchecker(String a){
+        int flag=0;
+        char[] chars = a.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for(char c : chars){
+            if(c=='.'){
+                flag++;
+            }
+        }
+        if(flag==1)
             return true;
         else
             return false;

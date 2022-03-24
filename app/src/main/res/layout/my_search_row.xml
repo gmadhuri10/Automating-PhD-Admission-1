@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/white"
-    android:paddingBottom="20dp">
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -15,76 +13,122 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/white"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="5dp">
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        >
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="89dp"
-            android:background="@color/white">
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
 
             <TextView
-                android:id="@+id/CourseNameDisplay"
+                android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:inputType="text"
-                android:minHeight="48dp"
-                android:text="Course Name"
+
+                android:text="Campus:"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.035"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.432" />
+
+            <TextView
+                android:id="@+id/CourseNameDisplay"
+                android:layout_width="209dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:text="Course Name"
+                android:textColor="#FF6200EE"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.105" />
 
             <TextView
                 android:id="@+id/CourseCampusDisplay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="78dp"
+                android:layout_height="33dp"
                 android:inputType="text"
+                android:padding="5dp"
                 android:text="Campus"
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CourseNameDisplay"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintHorizontal_bias="0.058"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/CourseSyllabusDisplay"
+                app:layout_constraintVertical_bias="0.347" />
 
             <TextView
                 android:id="@+id/CourseSyllabusDisplay"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+
                 android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:padding="5dp"
                 android:scrollbars="vertical"
                 android:text="Syllabus"
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.031"
-                app:layout_constraintStart_toEndOf="@+id/CourseNameDisplay"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.231" />
+                app:layout_constraintHorizontal_bias="0.191"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/CourseNameDisplay"
+                app:layout_constraintVertical_bias="0.161" />
 
             <Button
                 android:id="@+id/buttoncard"
-                android:layout_width="47dp"
-                android:layout_height="28dp"
-                android:text=""
+                android:layout_width="87dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/side_nav_bar"
+                android:backgroundTint="#ff6200ee"
+                android:text="View"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.948"
-                app:layout_constraintStart_toEndOf="@+id/CourseCampusDisplay"
-                app:layout_constraintTop_toBottomOf="@+id/CourseSyllabusDisplay"
-                app:layout_constraintVertical_bias="0.8" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CourseCampusDisplay"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="Syllabus:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.029"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.41" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

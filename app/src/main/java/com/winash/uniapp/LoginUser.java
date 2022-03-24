@@ -72,6 +72,7 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
             username.requestFocus();
             return;
         }
+        login.setVisibility(View.GONE);
         progress.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(un,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -95,12 +96,21 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
                                     }
                                 }
                                 if(!d) {
-                                    startActivity(new Intent(LoginUser.this, ApplicantHomePage.class));
-                                    finish();
+                                    try {
+                                        startActivity(new Intent(LoginUser.this, navigationui.class));
+                                        finish();
+                                    }catch (Exception e)
+                                    {
+                                        Toast.makeText(LoginUser.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                    }
+                                    login.setVisibility(View.VISIBLE);
                                 }
                                 else
+                                {
+                                    login.setVisibility(View.VISIBLE);
                                     Toast.makeText(LoginUser.this, "You have been blacklisted", Toast.LENGTH_SHORT).show();
                                 }
+                            }
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
                             }
@@ -109,6 +119,7 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
                     }
                     progress.setVisibility(View.INVISIBLE);
                 }else{
+                    login.setVisibility(View.VISIBLE);
                     progress.setVisibility(View.INVISIBLE);
                     Toast.makeText(LoginUser.this, "Please CHeck your credentials", Toast.LENGTH_SHORT).show();
                 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.Blacklist.Blacklist"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="#34CAC5C5"
     android:padding="20dp"
     >
 

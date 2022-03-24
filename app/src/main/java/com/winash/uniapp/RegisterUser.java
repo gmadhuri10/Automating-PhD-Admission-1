@@ -100,6 +100,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
         progress.setVisibility(View.VISIBLE);
+        RegisterUser.setVisibility(View.GONE);
         mAuth.createUserWithEmailAndPassword(email,p)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -124,6 +125,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                 }
                             });
                         }else {
+                            RegisterUser.setVisibility(View.VISIBLE);
                             Toast.makeText(RegisterUser.this, "Unsuccessful!!Try Again", Toast.LENGTH_SHORT).show();
                             progress.setVisibility(View.INVISIBLE);
                         }
