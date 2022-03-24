@@ -96,12 +96,21 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
                                     }
                                 }
                                 if(!d) {
-                                    startActivity(new Intent(LoginUser.this, ApplicantHomePage.class));
-                                    finish();
+                                    try {
+                                        startActivity(new Intent(LoginUser.this, navigationui.class));
+                                        finish();
+                                    }catch (Exception e)
+                                    {
+                                        Toast.makeText(LoginUser.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                    }
+                                    login.setVisibility(View.VISIBLE);
                                 }
                                 else
+                                {
+                                    login.setVisibility(View.VISIBLE);
                                     Toast.makeText(LoginUser.this, "You have been blacklisted", Toast.LENGTH_SHORT).show();
                                 }
+                            }
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
                             }
