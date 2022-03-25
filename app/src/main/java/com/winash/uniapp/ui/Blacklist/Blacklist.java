@@ -62,6 +62,23 @@ public class Blacklist extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                ArrayList<Applicant> filteredlist = new ArrayList<>();
+                for(Applicant item: list){
+                    if(item.getFname().toLowerCase().contains(s.toLowerCase()) || item.getLname().toLowerCase().contains(s.toLowerCase()) )
+                        filteredlist.add(item);
+                }
+                adapter.filterList(filteredlist);
+                return false;
+            }
+        });
         return view;
     }
 }

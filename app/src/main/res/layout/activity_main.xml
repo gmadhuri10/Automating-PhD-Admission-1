@@ -4,116 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#34CAC5C5"
     tools:context=".MainActivity"
     >
 
-    <TextView
-        android:id="@+id/MainHeader"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:text="UniApp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:background="@drawable/side_nav_bar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/logintext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="204dp"
         android:text="Existing user? Login below"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeader"
-        app:layout_constraintVertical_bias="0.468"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/textViewcourse"
+        app:layout_constraintVertical_bias="0.263"></TextView>
 
     <TextView
         android:id="@+id/registertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
         android:text="New user? Register below"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeader"
-        app:layout_constraintVertical_bias="0.293"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/LoginMain"
+        app:layout_constraintVertical_bias="0.156"></TextView>
 
     <TextView
         android:id="@+id/RegisterMain"
-        android:layout_width="91dp"
-        android:layout_height="31dp"
-        android:background="#F89BBA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:backgroundTint="#ff6200ee"
+        android:padding="10dp"
         android:text="Register"
-        android:textColor="@color/black"
-        android:textSize="20dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeader"
-        app:layout_constraintVertical_bias="0.386"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/logintext"
+        app:layout_constraintVertical_bias="0.479"></TextView>
 
     <TextView
         android:id="@+id/LoginMain"
-        android:layout_width="73dp"
-        android:layout_height="30dp"
-        android:background="#F89BBA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:backgroundTint="#ff6200ee"
         android:text="Login"
+        android:padding="10dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeader"
-        app:layout_constraintVertical_bias="0.546">
+        app:layout_constraintTop_toBottomOf="@+id/logintext"
+        app:layout_constraintVertical_bias="0.086">
 
     </TextView>
 
     <TextView
-        android:id="@+id/welcom"
-        android:layout_width="0dp"
-        android:layout_height="36dp"
+        android:id="@+id/MainHeader"
+        android:layout_width="319dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="12dp"
         android:text="Welcome to Amrita University"
+        android:textAlignment="center"
+        android:textColor="#ff6200ee"
         android:textSize="30dp"
-        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textViewcourse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeader"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewcourse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="500dp"
+        android:layout_width="310dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="372dp"
         android:text="We offer various courses in different field of study. Register to our university to our apply for PhD"
-        android:textSize="20dp"
         android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MainHeader"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewcourse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeader"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/untitled1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
