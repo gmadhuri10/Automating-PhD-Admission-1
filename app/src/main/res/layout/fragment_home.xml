@@ -58,6 +58,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:layout_editor_absoluteX="1dp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Search_Recycler_View_2"
+        android:layout_width="414dp"
+        android:layout_height="382dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
